@@ -1,14 +1,26 @@
 import dbConnect from "@/lib/dbConnect";
-import EcommerceModel from "@/models/Ecommerce";
+import WeatherModel from "@/models/Weather";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(req:NextRequest){
     try {
         await dbConnect();
         const  searchParams = req.nextUrl.searchParams;
-        const id = searchParams.get("id");
-        const product = await EcommerceModel.findById(id);
-        if(!product){
+        const city = searchParams.get("city")||"";
+        const state = searchParams.get("state")||"";
+        const country = searchParams.get("country")||"";
+        let weather;
+        if(city){
+            weather = await WeatherModel.findOne({city:{$regex:city,$options:'i'}});
+        }
+        if(state){
+            weather = await WeatherModel.findOne({state:{$regex:state,$options:'i'}});
+        }
+        if(country){
+            weather = await WeatherModel.findOne({state:{$regex:state,$options:'i'}});
+        }
+         
+        if(!weather){
             return NextResponse.json({
                 message:"product is not found ",
                 success:false,
@@ -17,7 +29,7 @@ export async function GET(req:NextRequest){
         return NextResponse.json({
             success:true,
             messsage:"data is found successfuly",
-            product
+            weather
         })
     } catch (error) {
         return NextResponse.json({

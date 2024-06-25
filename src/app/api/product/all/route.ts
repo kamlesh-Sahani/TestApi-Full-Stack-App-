@@ -1,8 +1,10 @@
+import dbConnect from "@/lib/dbConnect";
 import EcommerceModel from "@/models/Ecommerce";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(req:NextRequest){
     try {
+        await dbConnect();
         const product = await EcommerceModel.find({});
         if(!product){
             return NextResponse.json({

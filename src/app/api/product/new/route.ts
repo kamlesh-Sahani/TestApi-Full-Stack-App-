@@ -6,7 +6,6 @@ export async function POST(req: NextRequest) {
   try {
     await dbConnect();
     const reqBody: EcommerceSchemaType = await req.json();
-    console.log(reqBody);
     const {
       title,
       price,
