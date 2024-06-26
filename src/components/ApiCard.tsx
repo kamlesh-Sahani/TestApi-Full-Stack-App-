@@ -2,6 +2,7 @@ import { GoCopy } from "react-icons/go";
 import { MdOpenInNew } from "react-icons/md";
 import { CodeBlock, dracula } from "react-code-blocks";
 import { useState } from "react";
+import Link from "next/link";
 
 interface ApiCardType{
     apiUrl:string;
@@ -17,6 +18,7 @@ const ApiCard = ({apiUrl,description,code}:ApiCardType) => {
         setIsCopy(false);
       },1000);
     }
+  
   return (
     <div className="flex flex-col gap-8 mt-16">
       <div className="flex flex-col gap-4 ">
@@ -34,10 +36,10 @@ const ApiCard = ({apiUrl,description,code}:ApiCardType) => {
             }
            
             <GoCopy className=" cursor-pointer text-2xl  text-[#9cadc3]" onClick={copyHandler} />
-            <a href={apiUrl}>
+            <Link href={apiUrl} target="_blank">
               {" "}
               <MdOpenInNew className=" cursor-pointer text-2xl  text-[#9cadc3]" />
-            </a>
+            </Link>
           </div>
         </div>
         <div>

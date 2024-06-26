@@ -5,7 +5,7 @@ const Header = () => {
     <nav className="flex flex-col w-full">
       <div className="flex p-3 gap-4  justify-center bg-[#FFE8D6] ">
         <h3 className=" font-bold text-black">For Promotion contact us</h3>
-        <a href="" className=" text-blue-500">
+        <a href="mailto:kamleshbca2005@gmail.com" target="_blank" className=" text-blue-500">
           Click
         </a>
       </div>
@@ -22,7 +22,7 @@ const Header = () => {
                 Free Apis
               </li>
             </Link>
-            <Link href={"/contact"}>
+            <Link href="https://www.linkedin.com/in/kamlesh-sahani-692ab7247/" target="_blabk">
               <li className=" cursor-pointer  transition-all hover:text-blue-500 max-sm:text-sm">
                 contact
               </li>
@@ -32,7 +32,7 @@ const Header = () => {
                 About us
               </li>
             </Link>
-            <Link  href="mailto:kamleshbca2005@gmail.com" >
+            <Link  href="mailto:kamleshbca2005@gmail.com" target="_blank">
               {" "}
               <li className="max-sm:text-sm cursor-pointer transition-all hover:text-blue-500">
                 Feedback

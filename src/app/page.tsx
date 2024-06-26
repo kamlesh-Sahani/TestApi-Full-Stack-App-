@@ -1,5 +1,21 @@
 import Link from "next/link";
 import { TiWeatherStormy } from "react-icons/ti";
+import { SiShopee } from "react-icons/si";
+import { MdProductionQuantityLimits } from "react-icons/md";
+import { Suspense } from "react";
+interface ApiCardType {
+  url: string;
+  title: string;
+  Icon: React.ElementType;
+}
+const ApiCard = ({ url, title, Icon }: ApiCardType) => (
+  <Link href={`/${url}`}>
+    <div className="flex gap-5 items-center p-2 bg-[#282A36] w-72 h-20 rounded-md cursor-pointer pl-7">
+      <Icon className="text-2xl font-bold" />
+      <p className="text-xl font-semibold  text-[#9cadc3]">{title}</p>
+    </div>
+  </Link>
+);
 export default function Home() {
   return (
     <main className="w-full flex justify-center items-center ">
@@ -28,57 +44,27 @@ export default function Home() {
               with ease.
             </p>
           </div>
-          <p className="font-bold text-3xl mt-20  text-[#9cadc3] text-center">Free APIs</p>
+          <p className="font-bold text-3xl mt-20  text-[#9cadc3] text-center">
+            Free APIs
+          </p>
 
           <div className="flex gap-10 justify-center items-center flex-wrap">
-
-
-            <Link href={"/weather"}>
-              <div className="flex gap-5 items-center p-2 bg-[#282A36] w-72 h-20 rounded-md cursor-pointer pl-7">
-                <TiWeatherStormy className="text-2xl font-bold" />
-                <p className="text-xl font-semibold  text-[#9cadc3]">
-                  Weather APIs
-                </p>
-              </div>
-            </Link>
-            <Link href={"/weather"}>
-              <div className="flex gap-5 items-center p-2 bg-[#282A36] w-72 h-20 rounded-md cursor-pointer pl-7">
-                <TiWeatherStormy className="text-2xl font-bold" />
-                <p className="text-xl font-semibold  text-[#9cadc3]">
-                  Weather APIs
-                </p>
-              </div>
-            </Link>
-
-            <Link href={"/weather"}>
-              <div className="flex gap-5 items-center p-2 bg-[#282A36] w-72 h-20 rounded-md cursor-pointer pl-7">
-                <TiWeatherStormy className="text-2xl font-bold" />
-                <p className="text-xl font-semibold  text-[#9cadc3]">
-                  Weather APIs
-                </p>
-              </div>
-            </Link>
-            <Link href={"/weather"}>
-              <div className="flex gap-5 items-center p-2 bg-[#282A36] w-72 h-20 rounded-md cursor-pointer pl-7">
-                <TiWeatherStormy className="text-2xl font-bold" />
-                <p className="text-xl font-semibold  text-[#9cadc3]">
-                  Weather APIs
-                </p>
-              </div>
-            </Link>
-
-            <Link href={"/weather"}>
-              <div className="flex gap-5 items-center p-2 bg-[#282A36] w-72 h-20 rounded-md cursor-pointer pl-7">
-                <TiWeatherStormy className="text-2xl font-bold" />
-                <p className="text-xl font-semibold  text-[#9cadc3]">
-                  Weather APIs
-                </p>
-              </div>
-            </Link>
-
-
-
-
+              <ApiCard
+                title={"Weather Apis"}
+                Icon={TiWeatherStormy}
+                url={"weather"}
+              />
+              <ApiCard
+                title={"Ecommerce Apis"}
+                Icon={SiShopee}
+                url={"ecommerce"}
+              />
+              <ApiCard
+                title={"Product Apis"}
+                Icon={MdProductionQuantityLimits}
+                url={"product"}
+              />
+            
           </div>
         </div>
       </div>

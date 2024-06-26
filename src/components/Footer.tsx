@@ -3,7 +3,7 @@ import { SiGmail } from "react-icons/si";
 import Link from "next/link";
 const Footer = () => {
   return (
-    <footer className="flex justify-around mt-32 p-6  bg-[#282A36] max-md:flex-col max-md:gap-10 ">
+    <footer className="flex justify-around mt-96 p-6  bg-[#282A36] max-md:flex-col max-md:gap-10 h-full">
       <Link href={"/"} className="max-md:text-center">
         <h1 className="font-bold text-lg bg-blue-500 pt-1 pl-3 pr-3 cursor-pointer">
           Apis Master
@@ -11,13 +11,13 @@ const Footer = () => {
       </Link>
 
       <div className="flex gap-6">
-        <a href="https://www.linkedin.com/in/kamlesh-sahani-692ab7247">
+        <Link href="https://www.linkedin.com/in/kamlesh-sahani-692ab7247" target="_blank">
         <FaLinkedin className="text-4xl font-bold cursor-pointer hover:opacity-70 text-[#9cadc3] " />
-        </a>
+        </Link>
        
-       <a href="mailto:kamleshbca2005@gmail.com">
+       <Link href="mailto:kamleshbca2005@gmail.com" target="_blank">
        <SiGmail className="text-4xl font-bold cursor-pointer hover:opacity-70 text-[#9cadc3] " />
-       </a>
+       </Link>
       
       </div>
 
