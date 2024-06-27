@@ -8,8 +8,9 @@ interface ApiCardType{
     apiUrl:string;
     description:string;
     code:string;
+    owner?:string;
 }
-const ApiCard = ({apiUrl,description,code}:ApiCardType) => {
+const ApiCard = ({apiUrl,description,code,owner}:ApiCardType) => {
     const [isCopy,setIsCopy] = useState<boolean>(false);
     const copyHandler = ()=>{
       navigator.clipboard.writeText(apiUrl); 
@@ -27,7 +28,7 @@ const ApiCard = ({apiUrl,description,code}:ApiCardType) => {
         </p>
 
         <div className="flex justify-between items-center pl-4 bg-[#282A36]  p-5 w-auto  ">
-          <p className="font-semibold text-xl text-[#9cadc3] ">
+          <p className="font-semibold text-xl text-[#9cadc3] overflow-x-auto">
           {apiUrl}
           </p>
           <div className="flex gap-4">

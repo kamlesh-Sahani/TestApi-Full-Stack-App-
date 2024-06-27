@@ -56,6 +56,7 @@ export default function Home() {
                 title={api.title}
                 Icon={api.Icon}
                 url={api.url}
+                owner={api.owner}
               />
               ))
             }
