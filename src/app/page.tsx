@@ -1,18 +1,18 @@
 import Link from "next/link";
-import { TiWeatherStormy } from "react-icons/ti";
-import { SiShopee } from "react-icons/si";
-import { MdProductionQuantityLimits } from "react-icons/md";
-import { Suspense } from "react";
+import { apiData } from "@/data/constant";
 interface ApiCardType {
   url: string;
   title: string;
   Icon: React.ElementType;
+  owner?:string;
+  id:number;
 }
-const ApiCard = ({ url, title, Icon }: ApiCardType) => (
-  <Link href={`/${url}`}>
-    <div className="flex gap-5 items-center p-2 bg-[#282A36] w-72 h-20 rounded-md cursor-pointer pl-7">
+const ApiCard = ({ url, title, Icon,owner,id }: ApiCardType) => (
+  <Link href={url} key={id}>
+    <div className="flex gap-5 items-center p-2 bg-[#282A36] w-72 h-20 rounded-md cursor-pointer pl-7 relative">
       <Icon className="text-2xl font-bold" />
       <p className="text-xl font-semibold  text-[#9cadc3]">{title}</p>
+      <p className=" absolute right-3 bottom-2 text-[#9cadc3] font-semibold text-xs">{owner}</p>
     </div>
   </Link>
 );
@@ -49,22 +49,18 @@ export default function Home() {
           </p>
 
           <div className="flex gap-10 justify-center items-center flex-wrap">
-              <ApiCard
-                title={"Weather Apis"}
-                Icon={TiWeatherStormy}
-                url={"weather"}
+            {
+              apiData.map((api)=>(
+                <ApiCard
+                id={api.id}
+                title={api.title}
+                Icon={api.Icon}
+                url={api.url}
               />
-              <ApiCard
-                title={"Ecommerce Apis"}
-                Icon={SiShopee}
-                url={"ecommerce"}
-              />
-              <ApiCard
-                title={"Product Apis"}
-                Icon={MdProductionQuantityLimits}
-                url={"product"}
-              />
-            
+              ))
+            }
+         
+          
           </div>
         </div>
       </div>

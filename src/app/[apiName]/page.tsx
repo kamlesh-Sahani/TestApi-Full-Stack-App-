@@ -1,40 +1,33 @@
 "use client";
 import ApiCard from "@/components/ApiCard";
-interface ParamsType{
-    params:{
-        apiName:string;
-    }
-}
-const page = ({params}:ParamsType) => {
+import { codeAndDes } from "@/data/codeAndDes";
 
-    const des =`Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti
-    harum molestiae eum, exercitationem consectetur doloribus! Lorem ipsum
-    dolor sit amet consectetur adipisicing elit. Cum, reprehenderit`;
+const Page = ({ params }: { params: { apiName: string } }) => {
+  function fetchByTitle(title: string) {
+    return codeAndDes.find((item) => item.title.toLowerCase() === title.toLowerCase());
+  }
 
-    let code = `{
-      "country": "USA",
-      "state": "California",
-      "city": "goa",
-      "temperature": "258",
-      "wind": "10",
-      "humidity": "60%",
-      "atmosphericPressure": "1015",
-      "weatherCondtion": "Sunny",
-      "sunriseTime": "6",
-      "sunsetTime": "18",
-      "uvIndex": "Moderate",
-      "visibility": "10 km"
-    }
-    `;
+  const apiData = fetchByTitle(params.apiName);
+
+  if (!apiData) {
+    return (
+      <div className="w-full flex justify-center items-center">
+        <div className="w-9/12">
+          <p>No data found for the specified API name.</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="w-full flex justify-center items-center">
       <div className="w-9/12">
-      <ApiCard apiUrl={"localhost/api/product/all"} description={des} code={code}/>
-      <ApiCard apiUrl={"localhost/api/jack/one"} description={des} code={code}/>
+        {apiData.apis.map((api, index) => (
+          <ApiCard key={index} apiUrl={api.api} description={api.des} code={api.code} />
+        ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default Page;

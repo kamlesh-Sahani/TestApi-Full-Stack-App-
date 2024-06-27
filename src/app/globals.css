@@ -11,3 +11,21 @@ html,body{
   background-color: #000;
   color: #fff;
 }
+
+/* Universal selection styling */
+::selection {
+  background: #00e3d7; 
+  color: #000; 
+}
+
+/* Firefox-specific selection styling */
+::-moz-selection {
+  background: #00e3d7; 
+  color: #000; 
+}
+
+/* WebKit-specific selection styling */
+::-webkit-selection {
+  background: #00e3d7; 
+  color: #000; 
+}
