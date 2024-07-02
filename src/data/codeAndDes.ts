@@ -13,26 +13,15 @@ export const codeAndDes: CodeAndDesType[] = [
     title: "weather",
     apis: [
       {
-        api: "http://localhost:3000/api/weather/all",
+        api: "http://api.weatherapi.com/v1/current.json?key=a8d59a49f7d54862ac2182625242806&q=India",
 
-        code:dataCodes.weatherCode,
+        code:dataCodes.weatherApi,
         des: `Retrieve comprehensive weather data for all available locations. This API provides detailed information including temperature, wind speed, humidity, atmospheric pressure, weather conditions, sunrise and sunset times, UV index, and visibility. Perfect for applications that need a complete overview of weather across multiple regions.`,
       },
       {
-        api: "http://localhost:3000/api/weather/one?city=new delhi",
-        code:dataCodes.weatherCode,
+        api: "http://api.weatherapi.com/v1/current.json?key=a8d59a49f7d54862ac2182625242806&q=london",
+        code:dataCodes.cityWeather,
         des: `Get specific weather data for a particular city. This endpoint delivers detailed weather information such as temperature, wind speed, humidity, atmospheric pressure, weather conditions, sunrise and sunset times, UV index, and visibility for the specified city. Ideal for apps focused on urban weather forecasting.`,
-      },
-      {
-        api: "http://localhost:3000/api/weather/one?state=delhi",
-        code:dataCodes.weatherCode,
-        des: `Access weather details for a specific state. This API provides crucial weather metrics including temperature, wind speed, humidity, atmospheric pressure, weather conditions, sunrise and sunset times, UV index, and visibility tailored to the chosen state. Useful for state-wide weather monitoring and reporting.`,
-      },
-
-      {
-        api: "http://localhost:3000/api/weather/one?country=india",
-        code:dataCodes.weatherCode,
-        des: `Fetch weather information for an entire country. This endpoint offers comprehensive weather data including temperature, wind speed, humidity, atmospheric pressure, weather conditions, sunrise and sunset times, UV index, and visibility for a specified country. Essential for applications that need country-wide weather data analysis.`,
       },
     ],
   },
@@ -317,5 +306,208 @@ export const codeAndDes: CodeAndDesType[] = [
         des:"The API retrieves a product based on the provided productId passed as a path variable.This API serves as a means to fetch specific product information from the backend based on a unique identifier.By passing the productId in the URL, the API searches and retrieves the corresponding product details, including attributes such as name, price, description, stock, images and any other relevant information associated with the product."
       },
     ]
+  },
+  {
+    title:"socialMedia",
+    apis:[
+      {
+        api:"https://api.freeapi.app/api/v1/social-media/profile",
+        code:dataCodes.socialMediaProfile,
+        des:"The API endpoint allows a logged-in user to fetch their social media profile.When the user is authenticated and authorized, accessing this endpoint will return the user's social media profile information, such as their username, bio, avatar, cover image, and other relevant details."
+      },
+      {
+        api:"https://api.freeapi.app/api/v1/social-media/profile/u/rosanna_krajcik51",
+        code:dataCodes.socialMediaUsers,
+        des:"The API endpoint allows users to fetch another user's social media profile based on the username provided as a path variable.By accessing this endpoint and providing the username as a parameter, you will receive a response containing the social media profile information of the specified user."
+      }
+    ]
+  },
+  {
+    title:"SocialMediaPosts",
+    apis:[
+      {
+        api:"https://api.freeapi.app/api/v1/social-media/posts?page=1&limit=10",
+        code:dataCodes.socailMediaPosts,
+        des:"The API endpoint allows users to fetch all posts posted by themselves or other users within the social media application.By accessing this endpoint, users can retrieve a collection of posts containing relevant information."
+      },
+      {
+        api:"https://api.freeapi.app/api/v1/social-media/posts/6495426ed02af5a73904db67",
+        code:dataCodes.postsById,
+        des:"The API endpoint allows users to fetch a post by providing the post ID as a path variable.By accessing this endpoint and providing a valid post ID, users will receive a response containing the details of the post corresponding to the provided ID."
+      },
+      {
+        api:"https://api.freeapi.app/api/v1/social-media/posts/get/u/santos82?page=1&limit=3",
+        code:dataCodes.postsByUsername,
+        des:"The API endpoint allows users to fetch posts of other users by passing the username as a path variable.When accessing this endpoint and providing a valid username as a parameter, you will receive a response containing the posts associated with the specified username."
+      },
+      {
+        api:"https://api.freeapi.app/api/v1/social-media/posts/get/t/dolore?page=1&limit=3",
+        code:dataCodes.postsByTag,
+        des:"The API endpoint allows users to retrieve posts by passing a tag name as a path variable.When accessing this endpoint and providing a valid tag name as part of the URL, the API will return a response containing posts that are associated with the specified tag."
+      }
+    ]
+  },
+  {
+    title:"chatApp",
+    apis:[
+      {
+        api:"https://api.freeapi.app/api/v1/chat-app/chats",
+        code:dataCodes.chatApp,
+        des:"Retrieve all chats associated with the logged-in user.This endpoint provides a comprehensive list of both individual and group chats, offering a centralized view of the user's communication interactions.Developers can utilize this endpoint to seamlessly gather chat metadata, facilitating efficient tracking and management of conversations within the application."
+      },
+      {
+        api:"https://api.freeapi.app/api/v1/chat-app/chats/users",
+        code:dataCodes.chatAppUsers,
+        des:"This API endpoint enables developers to retrieve a list of users who are available for chat interactions.The endpoint facilitates the identification of potential chat partners or group members for the logged-in user.It provides a seamless way to explore and initiate conversations, fostering a dynamic and engaging chat environment within the application."
+      }
+    ]
+  },
+  {
+    title:"groupChat",
+    apis:[
+      {
+        api:"https://api.freeapi.app/api/v1/chat-app/chats/group/64ca9e166cabe93cce077e0a",
+        code:dataCodes.groupChat,
+        des:"This API endpoint allows developers to retrieve comprehensive information about a specific group chat.This includes essential details such as the group's name, the total number of participants, and a detailed list of member profiles, providing a holistic overview of the group's composition.By utilizing this endpoint, developers can seamlessly access and display key insights into group interactions."
+      }
+    ]
+  },
+  {
+    title:"toDoList",
+    apis:[
+      {
+        api:"https://api.freeapi.app/api/v1/todos?query=reactjs&complete=false",
+        code:dataCodes.toDoList,
+        des:"The API endpoint allows you to retrieve all the added todos.When accessing this endpoint, you will receive a response containing a list of all the todos that have been added."
+      },
+
+      {
+        api:"https://api.freeapi.app/api/v1/todos/648e0741aeefd0cfa40adddd",
+        code:dataCodes.toDoById,
+        des:"The API endpoint retrieves a specific todo item based on the todo ID provided as a path variable in the URL.When accessing this endpoint and specifying a valid todo ID in the URL, you will receive a response containing the details of the corresponding todo item."
+      }
+    ]
+  },
+  {
+    title:"weather2",
+    apis:[
+      {
+        api:"https://api.weatherapi.com/v1/current.json?key=a8d3f35fec004fc6bdf160839231906&q={city_name}&aqi=no",
+        code:dataCodes.weather2Code,
+        des:"This API endpoint retrieves the current weather information for a specified city. You need to replace `{city_name}` with the actual name of the city you want to get the weather information for. The response will include details such as temperature, humidity, wind speed, and weather condition."
+      }
+   
+    ]
+  },
+  {
+title:'spacex-lounches',
+apis:[
+  {
+    api:"https://api.spacexdata.com/v4/launches/upcoming",
+    code:dataCodes.spacexUpcomingCode,
+    des:" Retrieves a list of upcoming SpaceX launches."
+  },
+  {
+    api:"https://api.spacexdata.com/v4/launches/latest",
+    code:dataCodes.spacexLatestCode,
+    des:" Retrieves details of the latest SpaceX launch."
+  },
+  {
+    api:"https://api.spacexdata.com/v4/launches/past",
+    code:dataCodes.spacexUpcomingCode,
+    des:" Retrieves a list of past SpaceX launches.."
+  },
+  {
+    api:"https://api.spacexdata.com/v4/launches",
+    code:dataCodes.spacexUpcomingCode,
+    des:"Retrieves details of all SpaceX launches."
+  },
+
+  {
+    api:"https://api.spacexdata.com/v4/launches/{id}",
+    code:dataCodes.spacexLatestCode,
+    des:"Retrieves details of all SpaceX launches."
   }
+]
+  },
+  {
+    title:"spacex-rocket",
+    apis:[
+      {
+        api:"https://api.spacexdata.com/v4/rockets",
+        des:"Retrieves details of all SpaceX rockets",
+        code:dataCodes.spacexRocketCode
+      },
+      {
+        api:"https://api.spacexdata.com/v4/rockets/{id}",
+        des:"Retrieves details of a specific SpaceX rocket by its ID.",
+        code:dataCodes.spacexRocketCode
+      }
+
+    ]
+  },{
+    title:"spacex-capsules",
+    apis:[
+      {
+        api:"https://api.spacexdata.com/v4/capsules",
+        des:"Retrieves details of all SpaceX capsules.",
+        code:dataCodes.spacexCapsuleCode
+      },
+      {
+        api:"https://api.spacexdata.com/v4/capsules/{id}",
+        des:"Retrieves details of a specific SpaceX capsule by its ID.",
+        code:dataCodes.spacexCapsuleCode
+      }
+    ]
+  },{
+    title:"spacex-starlink",
+    apis:[
+      {
+        api:"https://api.spacexdata.com/v4/starlink",
+        des:"Retrieves details of all SpaceX Starlink satellites",
+        code:dataCodes.spacexStarlinkCode
+      }
+    ]
+  },{
+    "title": "coingecko",
+    "apis": [
+      {
+        "api": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum&vs_currencies=usd",
+        "code": dataCodes.coinGeckoSimplePrice,
+        "des": "Get the current price of Bitcoin and Ethereum in USD."
+      },
+      {
+        "api": "https://api.coingecko.com/api/v3/coins/list",
+        "code": dataCodes.coinGeckoSimplePrice,
+        "des": "List all supported coins id, name, and symbol."
+      },
+      {
+        "api": "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false",
+        "code": dataCodes.coinGeckoMarkets,
+        "des": "List the top 10 cryptocurrencies by market cap in USD."
+      },
+      {
+        "api": "https://api.coingecko.com/api/v3/coins/{id}",
+        "code": dataCodes.coinGeckoMarkets,
+        "des": "Get current data (name, price, market, ...) for a coin by its id."
+      },
+      {
+        "api": "https://api.coingecko.com/api/v3/exchanges",
+        "code": dataCodes.coinGeckoExchanges,
+        "des": "List all exchanges."
+      },
+      {
+        "api": "https://api.coingecko.com/api/v3/exchanges/{id}",
+        "code": dataCodes.coinGeckoExchanges,
+        "des": "Get exchange volume in BTC and tickers for a specific exchange by its id."
+      },
+      {
+        "api": "https://api.coingecko.com/api/v3/global",
+        "code": dataCodes.coinGeckoGlobal,
+        "des": "Get cryptocurrency global data."
+      }
+    ]
+  }
+  
+
 ];

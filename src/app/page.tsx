@@ -16,7 +16,7 @@ const ApiCard = ({ url, title, Icon,owner,id }: ApiCardType) => (
     </div>
   </Link>
 );
-export default function Home() {
+export default  function Home() {
   return (
     <main className="w-full flex justify-center items-center ">
       <div className="w-9/12 max-sm:w-full">
