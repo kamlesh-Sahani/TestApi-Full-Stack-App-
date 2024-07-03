@@ -1,5 +1,5 @@
-export const dataCodes={
-  booksCode:`{
+export const dataCodes = {
+  booksCode: `{
   "kind": "books#volume",
   "id": 2,
   "etag": "aT6gRM8dLto",
@@ -49,7 +49,7 @@ export const dataCodes={
   }
     
 }`,
-weatherCode:`{
+  weatherCode: `{
   "_id": "667aac4f9d85d962342de82b",
   "country": "USA",
   "state": "California",
@@ -65,7 +65,7 @@ weatherCode:`{
   "visibility": "10 km",
   "__v": 0
   }`,
-  weatherApi:`{
+  weatherApi: `{
   "location": {
       "name": "New Delhi",
       "region": "Delhi",
@@ -112,7 +112,7 @@ weatherCode:`{
       "gust_kph": 6.5
   }
 }`,
-cityWeather:`{
+  cityWeather: `{
   "location": {
       "name": "London",
       "region": "City of London, Greater London",
@@ -159,7 +159,7 @@ cityWeather:`{
       "gust_kph": 26.3
   }
 }`,
-  randomUserCode:`
+  randomUserCode: `
 {
             "gender": "male",
             "name": {
@@ -213,7 +213,7 @@ cityWeather:`{
             },
             "nat": "NZ"
 }`,
-randomProductCode:`
+  randomProductCode: `
 {
   "data": {
   "brand": "Golden",
@@ -237,7 +237,7 @@ randomProductCode:`
 "statusCode": 200,
 "success": true
 }`,
-randomeJokesCode:`
+  randomeJokesCode: `
  {
       "statusCode": 200,
       "data": {
@@ -248,14 +248,14 @@ randomeJokesCode:`
       "message": "Joke fetched successfully",
       "success": true
    }`,
-   stockCode:` 
+  stockCode: ` 
    {
       "Symbol": "TATACHEM",
       "Name": "Tata Chemicals Limited",
       "MarketCap": "₹ 28,355 Cr.",
       "CurrentPrice": "₹ 1,113"
     }`,
-    quotesCode:` {
+  quotesCode: ` {
       "author": "Charles Dickens",
       "content": "Subdue your appetites, my dears, and you've conquered human nature.",
       "tags": [],
@@ -265,7 +265,7 @@ randomeJokesCode:`
       "dateModified": "2023-04-14",
       "id": 1
     }`,
-    youtubeChannelCode:`{
+  youtubeChannelCode: `{
 "data": {
   "info": {
     "brandingSettings": {
@@ -323,7 +323,7 @@ randomeJokesCode:`
 "statusCode": 200,
 "success": true
 }`,
-youtubeVideoCode:`{
+  youtubeVideoCode: `{
       "kind": "youtube#videoListResponse",
       "items": {
       "kind": "youtube#video",
@@ -394,7 +394,7 @@ youtubeVideoCode:`{
       }
 }`,
 
-ecommerceProfileCode:`{
+  ecommerceProfileCode: `{
 "data": {
   "__v": 0,
   "_id": "649e795264e7dba29b72693b",
@@ -410,7 +410,7 @@ ecommerceProfileCode:`{
 "statusCode": 200,
 "success": true
 }`,
-ecommerceProduct:`{
+  ecommerceProduct: `{
 "statusCode": 200,
 "data": {
   "products": [],
@@ -427,7 +427,7 @@ ecommerceProduct:`{
 "message": "Products fetched successfully",
 "success": true
 }`,
-socialMediaProfile:`{
+  socialMediaProfile: `{
 "data": {
   "__v": 0,
   "_id": "64a3c6f3f867b3375720a5f4",
@@ -465,7 +465,7 @@ socialMediaProfile:`{
 "statusCode": 200,
 "success": true
 }`,
-socialMediaUsers:`{
+  socialMediaUsers: `{
 "data": {
   "__v": 0,
   "_id": "649fe0cfc4a9507d1220ec24",
@@ -504,7 +504,7 @@ socialMediaUsers:`{
 "success": true
 }`,
 
-socailMediaPosts:` {
+  socailMediaPosts: ` {
       "__v": 0,
       "_id": "649fe0cfc4a9507d1220eeee",
       "author": {
@@ -581,7 +581,7 @@ socailMediaPosts:` {
       ],
       "updatedAt": "2023-07-01T08:16:15.909Z"
     },`,
-postsById:`{
+  postsById: `{
 "data": {
   "__v": 0,
   "_id": "649fe0cfc4a9507d1220eefc",
@@ -664,7 +664,7 @@ postsById:`{
 "statusCode": 200,
 "success": true
 }`,
-postsByUsername:` {
+  postsByUsername: ` {
       "__v": 0,
       "_id": "64a3db356b55dac333b0413d",
       "author": {
@@ -743,7 +743,7 @@ postsByUsername:` {
       ],
       "updatedAt": "2023-07-04T08:41:25.251Z"
     }`,
-postsByTag:` {
+  postsByTag: ` {
       "__v": 0,
       "_id": "64a3db356b55dac333b04183",
       "author": {
@@ -821,7 +821,7 @@ postsByTag:` {
       ],
       "updatedAt": "2023-07-04T08:41:25.253Z"
     },`,
-chatApp:`{
+  chatApp: `{
 "data": [
   {
     "__v": 0,
@@ -952,7 +952,7 @@ chatApp:`{
 "success": true
 }`,
 
-chatAppUsers:`  {
+  chatAppUsers: `  {
     "__v": 0,
     "_id": "64d672295bda3332e4f36513",
     "avatar": {
@@ -969,7 +969,7 @@ chatAppUsers:`  {
     "updatedAt": "2023-08-11T17:38:49.119Z",
     "username": "nelle38"
   },`,
-groupChat:`{
+  groupChat: `{
 "data": {
   "__v": 0,
   "_id": "64d6722a5bda3332e4f368a9",
@@ -1097,7 +1097,7 @@ groupChat:`{
 "statusCode": 200,
 "success": true
 }`,
-toDoList:`{
+  toDoList: `{
 "data": [
   {
     "__v": 0,
@@ -1140,7 +1140,7 @@ toDoList:`{
 "statusCode": 201,
 "success": true
 }`,
-toDoById:`{
+  toDoById: `{
 "data": {
   "__v": 0,
   "_id": "648e0749aeefd0cfa40adde1",
@@ -1154,7 +1154,7 @@ toDoById:`{
 "statusCode": 200,
 "success": true
 }`,
-weather2Code:`{
+  weather2Code: `{
     "location": {
     "name": "Dekhi-Adamkhay",
     "region": "Helmand",
@@ -1201,7 +1201,7 @@ weather2Code:`{
     "gust_kph": 9.1
     }
 }`,
-spacexUpcomingCode:`{
+  spacexUpcomingCode: `{
     "fairings": {
     "reused": null,
     "recovery_attempt": null,
@@ -1291,7 +1291,7 @@ spacexUpcomingCode:`{
     "launch_library_id": "2306e0bc-e1a3-4a4a-9285-e1a94073655e",
     "id": "6243aec2af52800c6e91925d"
 },`,
-spacexLatestCode:`{
+  spacexLatestCode: `{
   "fairings": null,
   "links": {
   "patch": {
@@ -1361,7 +1361,7 @@ spacexLatestCode:`{
   "launch_library_id": "f33d5ece-e825-4cd8-809f-1d4c72a2e0d3",
   "id": "62dd70d5202306255024d139"
   }`,
-  spacexRocketCode:`{
+  spacexRocketCode: `{
   "height": {
   "meters": 22.25,
   "feet": 73
@@ -1463,7 +1463,7 @@ spacexLatestCode:`{
   "description": "The Falcon 1 was an expendable launch system privately developed and manufactured by SpaceX during 2006-2009. On 28 September 2008, Falcon 1 became the first privately-developed liquid-fuel launch vehicle to go into orbit around the Earth.",
   "id": "5e9d0d95eda69955f709d1eb"
   },`,
-  spacexCapsuleCode:`{
+  spacexCapsuleCode: `{
   "reuse_count": 0,
   "water_landings": 1,
   "land_landings": 0,
@@ -1476,7 +1476,7 @@ spacexLatestCode:`{
   "type": "Dragon 1.0",
   "id": "5e9e2c5bf35918ed873b2664"
   },`,
-  spacexStarlinkCode:`{
+  spacexStarlinkCode: `{
     "spaceTrack": {
       "CCSDS_OMM_VERS": "2.0",
       "COMMENT": "GENERATED VIA SPACE-TRACK.ORG API",
@@ -1528,7 +1528,7 @@ spacexLatestCode:`{
     "velocity_kms": null,
     "id": "5eed770f096e59000698560d"
   },`,
-  coinGeckoSimplePrice:`{
+  coinGeckoSimplePrice: `{
     "bitcoin": {
     "usd": 62708
     },
@@ -1536,7 +1536,7 @@ spacexLatestCode:`{
     "usd": 3447.06
     }
   }`,
-  coinGeckoMarkets:`{
+  coinGeckoMarkets: `{
     "id": "bitcoin",
     "symbol": "btc",
     "name": "Bitcoin",
@@ -1564,7 +1564,7 @@ spacexLatestCode:`{
     "roi": null,
     "last_updated": "2024-07-02T12:02:50.955Z"
 },`,
-coinGeckoExchanges:`{
+  coinGeckoExchanges: `{
     "id": "binance",
     "name": "Binance",
     "year_established": 2017,
@@ -1578,7 +1578,7 @@ coinGeckoExchanges:`{
     "trade_volume_24h_btc": 153672.98493765166,
     "trade_volume_24h_btc_normalized": 88955.03252105687
 },`,
-coinGeckoGlobal:`"data": {
+  coinGeckoGlobal: `"data": {
 "active_cryptocurrencies": 14871,
 "upcoming_icos": 0,
 "ongoing_icos": 49,
@@ -1726,6 +1726,204 @@ coinGeckoGlobal:`"data": {
 },
 "market_cap_change_percentage_24h_usd": 0.16446896601911876,
 "updated_at": 1719922085
-}`
+}`,
+  ipGeolocationCurrent: `{
+    "ip": "103.126.34.169",
+    "network": "103.126.32.0/22",
+    "version": "IPv4",
+    "city": "New Delhi",
+    "region": "National Capital Territory of Delhi",
+    "region_code": "DL",
+    "country": "IN",
+    "country_name": "India",
+    "country_code": "IN",
+    "country_code_iso3": "IND",
+    "country_capital": "New Delhi",
+    "country_tld": ".in",
+    "continent_code": "AS",
+    "in_eu": false,
+    "postal": "110003",
+    "latitude": 28.652,
+    "longitude": 77.1663,
+    "timezone": "Asia/Kolkata",
+    "utc_offset": "+0530",
+    "country_calling_code": "+91",
+    "currency": "INR",
+    "currency_name": "Rupee",
+    "languages": "en-IN,hi,bn,te,mr,ta,ur,gu,kn,ml,or,pa,as,bh,sat,ks,ne,sd,kok,doi,mni,sit,sa,fr,lus,inc",
+    "country_area": 3287590,
+    "country_population": 1352617328,
+    "asn": "AS135772",
+    "org": "Powernet"
+}`,
+  ipGeolocationCountry: `IN`,
+  ipGeolocationCity: `New Delhi`,
+  ipGeolocationTimezone: `Asia/Kolkata`,
+  ipGeolocationCurrency: `INR`,
+  triviaRandom: `{
+    "type": "multiple",
+    "difficulty": "medium",
+    "category": "Entertainment: Video Games",
+    "question": "What is the perk that was introduced in the &quot;Call Of Duty: Zombies&quot; map, &quot;Mob Of The Dead&quot;?",
+    "correct_answer": "Electric Cherry",
+    "incorrect_answers": [
+    "Quick Revive",
+    "Vulture Aid",
+    "Tombstone"
+},`,
+  triviaCategories: `{
+    "id": 9,
+    "name": "General Knowledge"
+},`,
+  numberTrivia: `666 is the number of the devil.`,
+  numberYear: `67 is the year that Pope Linus succeeds Saint Peter as the second pope (in Catholic reckoning).`,
 
-  }
+
+
+  nasaApod:`{
+        "date": "2023-06-01",
+        "explanation": "This is the Astronomy Picture of the Day explanation.",
+        "hdurl": "https://apod.nasa.gov/apod/image/2306/AstronomyPicture.jpg",
+        "title": "Astronomy Picture of the Day",
+        "url": "https://apod.nasa.gov/apod/image/2306/AstronomyPicture.jpg"
+      },`,
+      nasaNeoFeed:`{
+        "near_earth_objects": {
+          "2023-06-01": [
+            {
+              "id": "3729835",
+              "name": "2015 JU",
+              "nasa_jpl_url": "http://ssd.jpl.nasa.gov/sbdb.cgi?sstr=3729835",
+              "absolute_magnitude_h": 24.5,
+              "estimated_diameter": {
+                "kilometers": {
+                  "estimated_diameter_min": 0.037,
+                  "estimated_diameter_max": 0.082
+                }
+              },
+              "is_potentially_hazardous_asteroid": false,
+              "close_approach_data": [
+                {
+                  "close_approach_date": "2023-06-01",
+                  "relative_velocity": {
+                    "kilometers_per_hour": "45332.9028132998"
+                  },
+                  "miss_distance": {
+                    "astronomical": "0.1013487645"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      },`,
+      nasaMarsRoverPhotos:`{
+        "photos": [
+          {
+            "id": 102693,
+            "sol": 1000,
+            "camera": {
+              "id": 20,
+              "name": "FHAZ",
+              "rover_id": 5,
+              "full_name": "Front Hazard Avoidance Camera"
+            },
+            "img_src": "http://mars.jpl.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/01000/opgs/edr/fcam/FRB_493237144EDR_F0501338FHAZ00323M_.JPG",
+            "earth_date": "2015-05-30",
+            "rover": {
+              "id": 5,
+              "name": "Curiosity",
+              "landing_date": "2012-08-06",
+              "launch_date": "2011-11-26",
+              "status": "active"
+            }
+          }
+        ]
+      },`,
+      nasaMarsWeather:`{
+        "sol_keys": [
+          "1000",
+          "1001",
+          "1002"
+        ],
+        "1000": {
+          "AT": {
+            "av": -60.5,
+            "ct": 243,
+            "mn": -83.1,
+            "mx": -18.1
+          },
+          "PRE": {
+            "av": 732.5,
+            "ct": 243,
+            "mn": 699.2,
+            "mx": 765.8
+          },
+          "WD": {
+            "most_common": {
+              "compass_degrees": 247.6,
+              "compass_point": "WSW",
+              "compass_right": 0.55,
+              "compass_up": 0.83
+            }
+          }
+        }
+      },`,
+      nasaEarthImagery:`{
+        "date": "2023-06-01",
+        "url": "https://earth.nasa.gov/api/v1/satellite-imagery?lon=100.75&lat=1.5&date=2023-06-01"
+      },
+      "des": "Fetches satellite imagery for a specific location and date."
+    },`,
+    nasaEarthAssets:`{
+        "results": [
+          {
+            "id": "LC8_L1TP_001002_20170612_20170616_01_T1",
+            "acquisition_date": "2017-06-12"
+          },
+          {
+            "id": "LC8_L1TP_001002_20170527_20170603_01_T1",
+            "acquisition_date": "2017-05-27"
+          }
+        ]
+      },`,
+      nasaCme:` {
+        "activityID": "2023-06-01",
+        "catalog": "M2M_CATALOG",
+        "startTime": "2023-06-01T02:18Z",
+        "sourceLocation": "N20W30",
+        "activeRegionNum": "12345",
+        "link": "https://kauai.ccmc.gsfc.nasa.gov/DONKI/view/CME/17338/-1"
+      },`,
+      nasaSolarFlares:` {
+        "flrID": "2023-06-01",
+        "instruments": [
+          {
+            "displayName": "GOES"
+          }
+        ],
+        "beginTime": "2023-06-01T00:00Z",
+        "peakTime": "2023-06-01T00:10Z",
+        "endTime": "2023-06-01T00:20Z",
+        "classType": "C1.0",
+        "sourceLocation": "N10W10",
+        "activeRegionNum": "12345",
+        "link": "https://kauai.ccmc.gsfc.nasa.gov/DONKI/view/FLR/17338/-1"
+      },`,
+      nasaSolarEnergeticParticle:`{
+        "sepID": "2023-06-01",
+        "instruments": [
+          {
+            "displayName": "GOES"
+          }
+        ],
+        "eventTime": "2023-06-01T00:00Z",
+        "link": "https://kauai.ccmc.gsfc.nasa.gov/DONKI/view/SEP/17338/-1"
+      }`,
+
+      nasaGeomagneticStorm:`{
+        "gstID": "2023-06-01",
+        "startTime": "2023-06-01T00:00Z",
+        "link": "https://kauai.ccmc.gsfc.nasa.gov/DONKI/view/GST/17338/-1"
+      },`,
+};

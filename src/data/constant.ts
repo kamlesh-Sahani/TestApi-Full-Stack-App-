@@ -14,13 +14,16 @@ import { RiTodoFill } from "react-icons/ri";
 import { FaRegSquarePlus } from "react-icons/fa6";
 import { SiSpacex } from "react-icons/si";
 import { FaBitcoin } from "react-icons/fa6";
-
+import { FaLocationDot } from "react-icons/fa6";
+import { MdOutlineFolderOpen } from "react-icons/md";
+import { SiNasa } from "react-icons/si";
 export interface ApiDataType {
   id: number;
   title: string;
   Icon: React.ElementType;
   url: string;
   owner?: string;
+  isNew?:boolean;
 }
 export const apiData: ApiDataType[] = [
   {
@@ -28,6 +31,20 @@ export const apiData: ApiDataType[] = [
     title: "Weather Apis",
     Icon: TiWeatherStormy,
     url: "/weather",
+  },
+  {
+    id: 24,
+    title: "NASA Apis",
+    Icon: SiNasa,
+    url: "/nasa",
+    isNew:true
+  },
+  {
+    id: 23,
+    title: "Open Trivia Apis",
+    Icon: MdOutlineFolderOpen,
+    url: "/open-trivia-database",
+    isNew:true
   },
   {
     id: 2,
@@ -86,16 +103,34 @@ export const apiData: ApiDataType[] = [
   },
   { id: 16, title: "Weather Apis2", Icon: TiWeatherStormy, url: "/weather2" },
 
-
-  { id: 17, title: "SpaceX Launches Apis", Icon: SiSpacex, url: "/spacex-lounches" },
-  { id: 18, title: "SpaceX Rocket Apis", Icon: SiSpacex, url: "/spacex-rocket" },
-  { id: 19, title: "SpaceX Capsules Apis", Icon: SiSpacex, url: "/spacex-capsules" },
-  { id: 20, title: "SpaceX Starlink Apis", Icon: SiSpacex, url: "/spacex-starlink" },
-  { id: 20, title: "CoinGecko Apis", Icon: FaBitcoin, url: "/coingecko" },
-
-
-
-
+  {
+    id: 17,
+    title: "SpaceX Launches Apis",
+    Icon: SiSpacex,
+    url: "/spacex-lounches",
+    isNew: true,
+  },
+  {
+    id: 18,
+    title: "SpaceX Rocket Apis",
+    Icon: SiSpacex,
+    url: "/spacex-rocket",
+    isNew: true,
+  },
+  {
+    id: 19,
+    title: "SpaceX Capsules Apis",
+    Icon: SiSpacex,
+    url: "/spacex-capsules",
+    isNew: true,
+  },
+  {
+    id: 20,
+    title: "SpaceX Starlink Apis",
+    Icon: SiSpacex,
+    url: "/spacex-starlink",
+    isNew: true,
+  },
 
   // failed apis--------------------------------------
   {
@@ -139,5 +174,26 @@ export const apiData: ApiDataType[] = [
     Icon: RiTodoFill,
     url: "/toDoList",
     owner: "Hitesh choudary",
+  },
+  {
+    id: 21,
+    title: "CoinGecko Apis",
+    Icon: FaBitcoin,
+    url: "/coingecko",
+    isNew: true,
+  },
+  {
+    id: 22,
+    title: "IP Geolocation API",
+    Icon: FaLocationDot ,
+    url: "/ip-geolocation",
+    isNew: true,
+  },
+  {
+    id: 24,
+    title: "Numbers API",
+    Icon: RiDoubleQuotesL,
+    url: "/numbers",
+    isNew:true
   },
 ];

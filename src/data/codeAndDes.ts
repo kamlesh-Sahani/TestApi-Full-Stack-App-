@@ -507,7 +507,128 @@ apis:[
         "des": "Get cryptocurrency global data."
       }
     ]
+  },{
+    "title": "ip-geolocation",
+    "apis": [
+      {
+        "api": "https://ipapi.co/json/",
+        "code": dataCodes.ipGeolocationCurrent,
+        "des": "Get geolocation information for the current IP address."
+      },
+      {
+        "api": "https://ipapi.co/{ip}/json/",
+        "code": dataCodes.ipGeolocationCurrent,
+        "des": "Get geolocation information for a specific IP address."
+      },
+      {
+        "api": "https://ipapi.co/{ip}/country/",
+        "code": dataCodes.ipGeolocationCountry,
+        "des": "Get the country for a specific IP address."
+      },
+      {
+        "api": "https://ipapi.co/{ip}/city/",
+        "code": dataCodes.ipGeolocationCity,
+        "des": "Get the city for a specific IP address."
+      },
+      {
+        "api": "https://ipapi.co/{ip}/timezone/",
+        "code": dataCodes.ipGeolocationTimezone,
+        "des": "Get the timezone for a specific IP address."
+      },
+      {
+        "api": "https://ipapi.co/{ip}/currency/",
+        "code": dataCodes.ipGeolocationCurrency,
+        "des": "Get the currency for a specific IP address."
+      }
+    ]
+  },{
+    "title": "open-trivia-database",
+    "apis": [
+      {
+        "api": "https://opentdb.com/api.php?amount=10",
+        "code": dataCodes.triviaRandom,
+        "des": "Fetches 10 random trivia questions."
+      },
+      {
+        "api": "https://opentdb.com/api_category.php",
+        "code": dataCodes.triviaCategories,
+        "des": "Fetches a list of trivia categories."
+      }
+    ]
+  },{
+    "title": "numbers",
+    "apis": [
+      {
+        "api": "http://numbersapi.com/random/trivia",
+        "code": dataCodes.numberTrivia,
+        "des": "Fetches a random trivia fact about a number."
+      },
+      {
+        "api": "http://numbersapi.com/random/year",
+        "code": dataCodes.numberYear,
+        "des": "Fetches a random fact about a year."
+      }
+    ]
+  },
+  {
+    "title": "nasa",
+    "apis": [
+      {
+        "api": "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY",
+        "code": dataCodes.nasaApod,
+        "des": "DEMO_KEY Rate Limits ---> In documentation examples, the special DEMO_KEY api key is used. This API key can be used for initially exploring APIs prior to signing up, but it has much lower rate limits, so you’re encouraged to signup for your own API key if you plan to use the API (signup is quick and easy). The rate limits for the DEMO_KEY are:   ----> Hourly Limit: 30 requests per IP address per hour  Daily Limit: 50 requests per IP address per day: ---->  1.Fetches the Astronomy Picture of the Day."
+      },
+      {
+        "api": "https://api.nasa.gov/neo/rest/v1/feed?start_date={start_date}&end_date={end_date}&api_key=DEMO_KEY",
+        "code": dataCodes.nasaNeoFeed,
+        "des": "Fetches Near Earth Object data for a specified date range."
+      },
+      {
+        "api": "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol={sol}&camera={camera}&api_key=DEMO_KEY",
+        "code": dataCodes.nasaMarsRoverPhotos,
+        "des": "Fetches photos taken by Mars rovers on a specific sol (Martian day) and camera."
+      },
+      {
+        "api": "https://api.nasa.gov/insight_weather/?api_key=DEMO_KEY&feedtype=json&ver=1.0",
+        "code": dataCodes.nasaMarsWeather,
+        "des": "Fetches the latest weather data from Mars."
+      },
+      {
+        "api": "https://api.nasa.gov/planetary/earth/imagery?lon={longitude}&lat={latitude}&date={date}&api_key=DEMO_KEY",
+        "code": dataCodes.nasaEarthImagery,
+        "des": "Fetches satellite imagery for a specific location and date."
+      },
+      {
+        "api": "https://api.nasa.gov/planetary/earth/assets?lon={longitude}&lat={latitude}&begin={begin}&end={end}&api_key=DEMO_KEY",
+        "code": dataCodes.nasaEarthAssets,
+        "des": "Fetches available assets for a specific location and date range."
+      },
+      {
+        "api": "https://api.nasa.gov/DONKI/CME?startDate={start_date}&endDate={end_date}&api_key=DEMO_KEY",
+        "code": dataCodes.nasaCme,
+        "des": "Fetches Coronal Mass Ejections (CMEs) data."
+      },
+      {
+        "api": "https://api.nasa.gov/DONKI/FLR?startDate={start_date}&endDate={end_date}&api_key=DEMO_KEY",
+        "code": dataCodes.nasaSolarFlares,
+        "des": "Fetches Solar Flare data."
+      },
+      {
+        "api": "https://api.nasa.gov/DONKI/SEP?startDate={start_date}&endDate={end_date}&api_key=DEMO_KEY",
+        "code": dataCodes.nasaSolarEnergeticParticle,
+        "des": "Fetches Solar Energetic Particle (SEP) data."
+      },
+      {
+        "api": "https://api.nasa.gov/DONKI/GST?startDate={start_date}&endDate={end_date}&api_key=DEMO_KEY",
+        "code": dataCodes.nasaGeomagneticStorm,
+        "des": "Fetches Geomagnetic Storm data."
+      }
+    ]
   }
+  
+  
+  
+  
   
 
 ];

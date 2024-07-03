@@ -6,10 +6,13 @@ interface ApiCardType {
   Icon: React.ElementType;
   owner?:string;
   id:number;
+  isNew?:boolean
 }
-const ApiCard = ({ url, title, Icon,owner,id }: ApiCardType) => (
+const ApiCard = ({ url, title, Icon,owner,id,isNew}: ApiCardType) => (
   <Link href={url} key={id}>
     <div className="flex gap-5 items-center p-2 bg-[#282A36] w-72 h-20 rounded-md cursor-pointer pl-7 relative">
+      {isNew &&<button className=" absolute right-2 top-2 text-[#f22] font-semibold">New</button> }
+     
       <Icon className="text-2xl font-bold" />
       <p className="text-xl font-semibold  text-[#9cadc3]">{title}</p>
       <p className=" absolute right-3 bottom-2 text-[#9cadc3] font-semibold text-xs">{owner}</p>
@@ -57,6 +60,7 @@ export default  function Home() {
                 Icon={api.Icon}
                 url={api.url}
                 owner={api.owner}
+                isNew={api?.isNew}
               />
               ))
             }
