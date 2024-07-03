@@ -4,22 +4,27 @@ interface ApiCardType {
   url: string;
   title: string;
   Icon: React.ElementType;
-  owner?:string;
-  id:number;
-  isNew?:boolean
+  owner?: string;
+  isNew?: boolean;
 }
-const ApiCard = ({ url, title, Icon,owner,id,isNew}: ApiCardType) => (
-  <Link href={url} key={id}>
+const ApiCard = ({ url, title, Icon, owner, isNew }: ApiCardType) => (
+  <Link href={url}>
     <div className="flex gap-5 items-center p-2 bg-[#282A36] w-72 h-20 rounded-md cursor-pointer pl-7 relative">
-      {isNew &&<button className=" absolute right-2 top-2 text-[#f22] font-semibold">New</button> }
-     
+      {isNew && (
+        <button className=" absolute right-2 top-2 text-[#f22] font-semibold">
+          New
+        </button>
+      )}
+
       <Icon className="text-2xl font-bold" />
       <p className="text-xl font-semibold  text-[#9cadc3]">{title}</p>
-      <p className=" absolute right-3 bottom-2 text-[#9cadc3] font-semibold text-xs">{owner}</p>
+      <p className=" absolute right-3 bottom-2 text-[#9cadc3] font-semibold text-xs">
+        {owner}
+      </p>
     </div>
   </Link>
 );
-export default  function Home() {
+export default function Home() {
   return (
     <main className="w-full flex justify-center items-center ">
       <div className="w-9/12 max-sm:w-full">
@@ -52,20 +57,16 @@ export default  function Home() {
           </p>
 
           <div className="flex gap-10 justify-center items-center flex-wrap">
-            {
-              apiData.map((api)=>(
-                <ApiCard
-                id={api.id}
+            {apiData.map((api) => (
+              <ApiCard
+              key={api.id}
                 title={api.title}
                 Icon={api.Icon}
                 url={api.url}
                 owner={api.owner}
                 isNew={api?.isNew}
               />
-              ))
-            }
-         
-          
+            ))}
           </div>
         </div>
       </div>

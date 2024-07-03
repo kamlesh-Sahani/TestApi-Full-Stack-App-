@@ -2,11 +2,11 @@
 import ApiCard from "@/components/ApiCard";
 import { codeAndDes } from "@/data/codeAndDes";
 
+
 const Page = ({ params }: { params: { apiName: string } }) => {
   function fetchByTitle(title: string) {
     return codeAndDes.find((item) => item.title.toLowerCase() === title.toLowerCase());
   }
-
   const apiData = fetchByTitle(params.apiName);
 
   if (!apiData) {
