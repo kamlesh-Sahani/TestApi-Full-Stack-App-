@@ -1,6 +1,5 @@
 
-```markdown
-# API Catalog
+# ApisMaster
 
 This project provides a collection of API endpoints categorized into various sections like weather, products, random users, jokes, books, stock, quotes, and YouTube. Each category contains multiple API endpoints along with sample data and descriptions to help you understand the API's functionality.
 
@@ -18,8 +17,6 @@ This project provides a collection of API endpoints categorized into various sec
   - [Stock](#stock)
   - [Quotes](#quotes)
   - [YouTube](#youtube)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Installation
 
@@ -202,19 +199,4 @@ codeAndDes.forEach(category => {
 - **API:** `https://api.freeapi.app/api/v1/public/youtube/video/random`
 - **Description:** The API endpoint returns a single random video from a list of videos. Upon accessing this endpoint, you will receive a response containing the details of a randomly selected video.
 
-## Contributing
 
-We welcome contributions to enhance the API Catalog project. To contribute, please follow these steps:
-
-1. Fork the repository.
-2. Create a new branch: `git checkout -b feature/your-feature-name`.
-3. Make your changes and commit them: `git commit -m 'Add new feature'`.
-4. Push to the branch: `git push origin feature/your-feature-name`.
-5. Create a pull request on GitHub.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-```
-
-Feel free to customize this README file as needed for your project.
