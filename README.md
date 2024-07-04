@@ -23,7 +23,7 @@ This project provides a collection of API endpoints categorized into various sec
 Clone the repository to your local machine:
 
 ```sh
-git clone https://github.com/your-username/api-catalog.git
+git clone https://github.com/kamlesh-Sahani/TestApi-Full-Stack-App-.git
 cd api-catalog
 ```
 
