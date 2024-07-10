@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { apiData } from "@/data/constant";
+import {apiData} from '../data/constant';
 interface ApiCardType {
   url: string;
   title: string;

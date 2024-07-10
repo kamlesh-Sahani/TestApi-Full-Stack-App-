@@ -1,6 +1,6 @@
 "use client";
 import ApiCard from "@/components/ApiCard";
-import { codeAndDes } from "@/data/codeAndDes";
+import { codeAndDes } from "../../data/codeAndDes";
 
 
 const Page = ({ params }: { params: { apiName: string } }) => {
