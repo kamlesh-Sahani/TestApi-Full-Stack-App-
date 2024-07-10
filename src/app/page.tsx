@@ -1,5 +1,5 @@
 import Link from "next/link";
-import {apiData} from '../data/constant';
+import { apiData } from "../data/constant";
 interface ApiCardType {
   url: string;
   title: string;
@@ -30,24 +30,19 @@ export default function Home() {
         <div className="flex flex-col mt-20  gap-10  w-full">
           <div className="w-full flex flex-col justify-center items-center ">
             <h1 className=" text-5xl text-[#ffffff] font-semibold text-center max-sm:text-4xl">
-              High-Quality{" "}
-              <span className=" text-blue-500">APIs</span>{" "}
+              High-Quality <span className=" text-blue-500">APIs</span>{" "}
               Available for Your Projects
             </h1>
             <p className="text-2xl text-[#9cadc3] w-3/4 text-center mt-4 max-sm:text-xl max-sm:text-start">
               Explore essential APIs tailored for testing and small-scale{" "}
-              <span className=" text-blue-500">
-                projects
-              </span>
-              . Accelerate your development process with{" "}
-              <span className="text-blue-500 ">
-                powerful
-              </span>{" "}
-              tools designed for rapid prototyping and innovation. Dive into our
-              comprehensive collection to 
-               <span className=" text-blue-500 ">
-               {" "}
-                 build, test, and iterate
+              <span className=" text-blue-500">projects</span>. Accelerate your
+              development process with{" "}
+              <span className="text-blue-500 ">powerful</span> tools designed
+              for rapid prototyping and innovation. Dive into our comprehensive
+              collection to
+              <span className=" text-blue-500 ">
+                {" "}
+                build, test, and iterate
               </span>{" "}
               with ease.
             </p>
@@ -59,7 +54,7 @@ export default function Home() {
           <div className="flex gap-10 justify-center items-center flex-wrap  w-full">
             {apiData.map((api) => (
               <ApiCard
-              key={api.id}
+                key={api.id}
                 title={api.title}
                 Icon={api.Icon}
                 url={api.url}
