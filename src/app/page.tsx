@@ -9,9 +9,9 @@ interface ApiCardType {
 }
 const ApiCard = ({ url, title, Icon, owner, isNew }: ApiCardType) => (
   <Link href={url}>
-    <div className="flex gap-5 items-center p-2 bg-[#282A36] w-72 h-20 rounded-md cursor-pointer pl-7 relative">
+    <div className="flex gap-5 items-center p-2 bg-[#282A36] w-72 h-20 rounded-md cursor-pointer pl-7 relative max-sm:w-[90vw]">
       {isNew && (
-        <button className=" absolute right-2 top-2 text-[#f22] font-semibold">
+        <button className=" absolute right-2 top-2 text-blue-500 font-semibold">
           New
         </button>
       )}
@@ -30,24 +30,25 @@ export default function Home() {
       <div className="w-9/12 max-sm:w-full">
         <div className="flex flex-col mt-20  gap-10  w-full">
           <div className="w-full flex flex-col justify-center items-center ">
-            <h1 className=" text-5xl text-[#ffffff] font-semibold text-center">
+            <h1 className=" text-5xl text-[#ffffff] font-semibold text-center max-sm:text-4xl">
               High-Quality{" "}
-              <span className=" bg-blue-500 text-white p-2">APIs</span>{" "}
+              <span className=" text-blue-500">APIs</span>{" "}
               Available for Your Projects
             </h1>
-            <p className="text-2xl text-[#9cadc3] w-3/4 text-center mt-4">
+            <p className="text-2xl text-[#9cadc3] w-3/4 text-center mt-4 max-sm:text-xl max-sm:text-start">
               Explore essential APIs tailored for testing and small-scale{" "}
-              <span className=" bg-blue-500 text-white pl-2 pr-2">
+              <span className=" text-blue-500">
                 projects
               </span>
               . Accelerate your development process with{" "}
-              <span className=" bg-blue-500 text-white pl-2 pr-2">
+              <span className="text-blue-500 ">
                 powerful
               </span>{" "}
               tools designed for rapid prototyping and innovation. Dive into our
-              comprehensive collection to{" "}
-              <span className=" bg-blue-500 text-white pl-2 pr-2">
-                build, test, and iterate{" "}
+              comprehensive collection to 
+               <span className=" text-blue-500 ">
+               {" "}
+                 build, test, and iterate
               </span>{" "}
               with ease.
             </p>
@@ -56,7 +57,7 @@ export default function Home() {
             Free APIs
           </p>
 
-          <div className="flex gap-10 justify-center items-center flex-wrap">
+          <div className="flex gap-10 justify-center items-center flex-wrap  w-full">
             {apiData.map((api) => (
               <ApiCard
               key={api.id}

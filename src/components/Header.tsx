@@ -9,8 +9,8 @@ const Header = () => {
           Click
         </a>
       </div>
-      <div className="flex justify-center gap-40  p-4 max-md:gap-10 max-sm:gap-6 max-sm:overflow-x-auto">
-        <Link href={"/"}> <h1 className="font-bold text-lg bg-blue-500 pt-1 pl-3 pr-3 cursor-pointer max-sm:text-sm ">
+      <div className="flex justify-center gap-40  p-4 max-md:gap-10 max-sm:gap-3 max-sm:overflow-x-auto max-sm:p-1">
+        <Link href={"/"}> <h1 className="font-bold text-lg bg-blue-500 pt-1 pl-3 pr-3 cursor-pointer max-sm:p-1 max-sm:text-sm ">
           Apis Master
         </h1></Link>
        
@@ -18,7 +18,7 @@ const Header = () => {
           <ul className="flex  justify-center items-center list-none gap-5 max-sm-gap-2">
             <Link href={"/"}>
               {" "}
-              <li className=" cursor-pointer transition-all hover:text-blue-500 max-sm:text-sm">
+              <li className=" cursor-pointer transition-all hover:text-blue-500 max-sm:hidden">
                 Free Apis
               </li>
             </Link>

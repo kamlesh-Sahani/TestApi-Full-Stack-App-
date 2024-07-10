@@ -20,8 +20,8 @@ const Page = ({ params }: { params: { apiName: string } }) => {
   }
 
   return (
-    <div className="w-full flex justify-center items-center">
-      <div className="w-9/12">
+    <div className="w-full flex justify-center items-center max-sm:justify-start max-sm:items-start ">
+      <div className="w-9/12 max-sm:w-full">
         {apiData.apis.map((api, index) => (
           <ApiCard key={index} apiUrl={api.api} description={api.des} code={api.code} />
         ))}
